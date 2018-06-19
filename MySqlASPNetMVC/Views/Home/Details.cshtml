@@ -1,0 +1,20 @@
+﻿@model MySqlASPNetMVC.Models.Person
+@{
+    ViewBag.Title = "Detalhe Pessoa";
+}
+
+<div class="page-header">
+    <h1>Pessoa <small>organize o cadastro de pessoas</small></h1>
+    <a href="@Url.Action("Insert","Person")" class="btn btn-sm btn-primary">Nova Pessoa</a>
+</div>
+<fieldset>
+    <legend>Detalhes da Pessoa</legend>
+    <div class="form-group">
+        <strong>Nome: </strong> @Model.Name
+    </div>
+</fieldset>
+<hr />
+<p>
+    <a href="@Url.Action("Update","Home", new{Id=Model.Id})" class="btn btn-sm btn-info">Editar</a>
+    <a href="@Url.Action("Index","Home")">Voltar</a>
+</p>
